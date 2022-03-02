@@ -1,0 +1,35 @@
+.about {
+    .wrapper {
+        margin-top:70px;
+        display: flex;
+        justify-content: space-between;
+        .skills-chart {
+            width: 35%;
+            h3 {
+                color: $bright-pink;
+            }
+        }
+        .interest-list {
+            text-align: center;
+            width: 60%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .interest-container {
+                width: calc(40% - 40px);
+                margin: 40px;
+            }
+        }
+        .progress-container {
+            width: 100%;
+            height:5px;
+            background-color: lightgrey;
+            .progress-amount {
+                height:5px;
+                width: 70%;
+                background-color: $bright-pink;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,15 @@
+header {
+    display: flex;
+    align-items: center;
+    height: 65vh;
+    background-color: $soft-yellow;
+    position: relative;
+    #header-accent {
+        position: absolute;
+        right:5%;
+        bottom:-15%;
+        img {
+            width: 100%;
+        }
+    }
+}

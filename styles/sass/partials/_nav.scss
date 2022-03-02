@@ -1,0 +1,20 @@
+nav {
+    background-color: $soft-yellow;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+            li {
+                padding-left: 20px;
+            }
+        }
+
+        // make logo invisible until scrolled
+        #name-logo {
+            opacity: 0;
+        }
+    }
+
+}

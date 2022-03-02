@@ -1,0 +1,37 @@
+// Fonts
+html {
+    font-size: 125%;
+    font-family: $primary-font;
+} 
+
+p {   
+    font-family: $secondary-font;
+}
+
+a {
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h1 {
+    color: $bright-pink;
+    font-size: 5rem;
+    margin-top:-10px;
+}
+
+h4 {
+    // border-bottom: 1px solid #000;
+    padding-bottom: -30px;
+    position: relative;
+    &::after {
+        content:'';
+        position: absolute;
+        width: 200px;
+        height: 12px;
+        top: 55%;
+        left:0;
+        z-index: -1;
+        background-color: $soft-yellow;
+    }
+}

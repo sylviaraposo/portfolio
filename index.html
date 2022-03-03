@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;700&family=Mulish:wght@300;400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" href="./assets/fav.ico">
+    
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/a763f0788e.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
         <nav>
@@ -25,9 +30,18 @@
 
     <header>
         <div class="wrapper">
-            <h2>hi, my name is</h2>
-            <h1>Sylvia Raposo<span class="blue-text">.</span></h1>
-            <img src="./assets/illustration.png" alt="" id="header-accent">
+            <div class="header-text">
+                <h2>hi, my name is</h2>
+                <h1>Sylvia Raposo<span class="blue-text">.</span></h1>
+                <img src="./assets/illustration.png" alt="" id="header-accent">
+            </div>
+            <div class="animation-toggle">
+                <h5>toggle animations</h5>
+                <label class="animation-switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
         </div>
     </header> <!-- Header ENDS -->
 
@@ -39,45 +53,50 @@
                 <h5>JAVASCRIPT</h5>
                 <!-- A container to be filled with the skill amount -->
                 <div class="progress-container">
-                    <div class="progress-amount"></div>
+                    <div class="progress-amount js"></div>
                 </div>
 
                 <h5>HTML & CSS</h5>
                 <div class="progress-container">
-                    <div class="progress-amount"></div>
+                    <div class="progress-amount html"></div>
                 </div>
 
                 <h5>SQL</h5>
                 <div class="progress-container">
-                    <div class="progress-amount"></div>
+                    <div class="progress-amount sql"></div>
                 </div>
 
                 <h5>JAVA</h5>
                 <div class="progress-container">
-                    <div class="progress-amount"></div>
+                    <div class="progress-amount java"></div>
                 </div>
-                <button>let's chat!</button>
+
+                <h5>REACT</h5>
+                <div class="progress-container">
+                    <div class="progress-amount react"></div>
+                </div>
+                <button>let's chat</button>
             </div>
 
             <div class="interest-list">
                 <div class="interest-container">
-                    <i></i>
-                    <h4>web development</h4>
+                    <i class="interests fas fa-solid fa-camera-retro fa-3x"></i>
+                    <h4>photography</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, nemo consequuntur perferendis commodi soluta harum!</p>
                 </div>
                 <div class="interest-container">
-                    <i></i>
-                    <h4>web development</h4>
+                    <i class="interests fas fa-solid fa-pen fa-3x"></i>
+                    <h4>digital illustration</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, nemo consequuntur perferendis commodi soluta harum!</p>
                 </div>
                 <div class="interest-container">
-                    <i></i>
-                    <h4>web development</h4>
+                    <i class="interests fas fa-solid fa-book fa-3x"></i>
+                    <h4>reading</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, nemo consequuntur perferendis commodi soluta harum!</p>
                 </div>
                 <div class="interest-container">
-                    <i></i>
-                    <h4>web development</h4>
+                    <i class="interests fas fa-solid fa-mountain fa-3x"></i>
+                    <h4>traveling</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, nemo consequuntur perferendis commodi soluta harum!</p>
                 </div>
             </div>
@@ -86,7 +105,12 @@
 
     <section class="skill-banner">
         <div class="wrapper">
-            <i></i><i></i><i></i><i></i><i></i>
+            <i class="skills fab fa-brands fa-react fa-5x"></i>
+            <i class="skills fab fa-brands fa-html5 fa-5x"></i>
+            <i class="skills fab fa-brands fa-js fa-5x"></i>
+            <i class="skills fab fa-brands fa-java fa-5x"></i>
+            <i class="skills fab fa-brands fa-python fa-5x"></i>
+            <i class="skills fab fa-brands fa-github fa-5x"></i>
         </div>
     </section>
 
@@ -112,9 +136,11 @@
             </div>
             <div class="project-image">
                 <div class="img-container">
-                    <img src="" alt="">
+                    <img src="./assets/ghibli.jpg" alt="">
                 </div>
             </div>
+            <img id="grey-illustration" src="./assets/grey-illustration.png" alt="">
+            <img id="ellipse" src="./assets/ellipse.png" alt="">
         </div>
     </section>
 

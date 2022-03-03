@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 .wrapper {
     width: 85%;
     margin: 0 auto;
@@ -13,8 +16,31 @@ li {
 a {
     text-decoration: none;
     color:inherit;
+    letter-spacing: 1px;
 }
 
 .blue-text {
     color: $light-teal;
+}
+
+button {
+    text-transform: uppercase;
+    border: none;
+    margin-top:60px;
+    background-color: $bright-pink;
+    padding: 20px 50px;
+    color: white;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+i {
+    &.interests {
+        color: $light-teal;
+    }
+    &.skills {
+        color: white;
+    }
+    
 }

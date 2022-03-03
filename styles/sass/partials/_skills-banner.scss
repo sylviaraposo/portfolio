@@ -1,0 +1,10 @@
+.skill-banner {
+    background-color: $light-teal;
+    height:25vh;
+    .wrapper {  
+        display: flex;
+        height:100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+}

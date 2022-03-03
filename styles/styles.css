@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -230,6 +231,10 @@ html {
   overflow: hidden;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .wrapper {
   width: 85%;
   margin: 0 auto;
@@ -245,10 +250,30 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+  letter-spacing: 1px;
 }
 
 .blue-text {
   color: #00bec5;
+}
+
+button {
+  text-transform: uppercase;
+  border: none;
+  margin-top: 60px;
+  background-color: #ed3363;
+  padding: 20px 50px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+i.interests {
+  color: #00bec5;
+}
+i.skills {
+  color: white;
 }
 
 html {
@@ -268,8 +293,16 @@ a {
 
 h1 {
   color: #ed3363;
-  font-size: 5rem;
+  font-size: 6rem;
   margin-top: -10px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
 }
 
 h4 {
@@ -279,10 +312,10 @@ h4 {
 h4::after {
   content: "";
   position: absolute;
-  width: 200px;
+  width: 100%;
   height: 12px;
   top: 55%;
-  left: 0;
+  right: 0;
   z-index: -1;
   background-color: #fdf3b3;
 }
@@ -311,18 +344,122 @@ header {
   background-color: #fdf3b3;
   position: relative;
 }
+header h1 {
+  width: 60%;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.3rem solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0;
+  -webkit-animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+          animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
 header #header-accent {
   position: absolute;
-  right: 5%;
+  right: 10%;
   bottom: -15%;
 }
 header #header-accent img {
   width: 100%;
 }
+header .animation-toggle {
+  text-align: right;
+  position: absolute;
+  bottom: 5%;
+  right: 1%;
+}
+header .animation-toggle .animation-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  border-radius: 50%;
+}
+header .animation-toggle .animation-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+header .animation-toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+header .animation-toggle .slider:before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+header .animation-toggle input:checked + .slider {
+  border-radius: 34px;
+  background-color: #ed3363;
+}
+header .animation-toggle input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+header .animation-toggle input:checked + .slider:before {
+  transform: translateX(26px);
+}
+header .animation-toggle h5 {
+  opacity: 80%;
+  margin-bottom: 10px;
+}
 
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+@-webkit-keyframes blink-caret {
+  from {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+@keyframes blink-caret {
+  from {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+.about {
+  margin-top: 80px;
+  margin-bottom: 110px;
+}
 .about .wrapper {
   margin-top: 70px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .about .wrapper .skills-chart {
@@ -344,11 +481,95 @@ header #header-accent img {
 }
 .about .wrapper .progress-container {
   width: 100%;
-  height: 5px;
+  height: 8px;
   background-color: lightgrey;
 }
 .about .wrapper .progress-container .progress-amount {
-  height: 5px;
-  width: 70%;
-  background-color: #ed3363;
+  height: 8px;
+}
+.about .wrapper .progress-container .progress-amount.js {
+  background-color: #00bec5;
+  width: 65%;
+}
+.about .wrapper .progress-container .progress-amount.html {
+  background-color: #00bec5;
+  width: 95%;
+}
+.about .wrapper .progress-container .progress-amount.react {
+  background-color: #00bec5;
+  width: 60%;
+}
+.about .wrapper .progress-container .progress-amount.java {
+  background-color: #00bec5;
+  width: 75%;
+}
+.about .wrapper .progress-container .progress-amount.sql {
+  background-color: #00bec5;
+  width: 85%;
+}
+
+.skill-banner {
+  background-color: #00bec5;
+  height: 25vh;
+}
+.skill-banner .wrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.projects {
+  height: 75vh;
+  margin: 80px 0;
+  position: relative;
+}
+.projects .wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.projects .wrapper .project-image {
+  width: 45%;
+  box-shadow: 2px 2px 5px;
+}
+.projects .wrapper .project-image .img-container {
+  width: 100%;
+  height: 100%;
+}
+.projects .wrapper .project-image .img-container img {
+  display: block;
+  width: 100%;
+}
+.projects .wrapper h3 {
+  margin-bottom: 0;
+}
+.projects .wrapper h3:hover {
+  color: #ed3363;
+  cursor: pointer;
+}
+.projects .wrapper h3:hover::after {
+  opacity: 1;
+}
+.projects .wrapper h3::after {
+  content: "➙";
+  padding-left: 10px;
+  opacity: 0;
+}
+.projects .wrapper h5 {
+  margin-top: 5px;
+  font-weight: 400;
+}
+.projects #grey-illustration {
+  position: absolute;
+  height: 30%;
+  right: -40px;
+  top: -20%;
+}
+.projects #ellipse {
+  position: absolute;
+  height: 30%;
+  right: -6%;
+  z-index: -1;
+  top: -5%;
 }

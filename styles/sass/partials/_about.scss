@@ -1,7 +1,10 @@
 .about {
+    margin-top: 80px;
+    margin-bottom: 110px;
     .wrapper {
         margin-top:70px;
         display: flex;
+        align-items: center;
         justify-content: space-between;
         .skills-chart {
             width: 35%;
@@ -22,12 +25,30 @@
         }
         .progress-container {
             width: 100%;
-            height:5px;
+            height:8px;
             background-color: lightgrey;
             .progress-amount {
-                height:5px;
-                width: 70%;
-                background-color: $bright-pink;
+                height:8px;
+                &.js {
+                    background-color: $light-teal;
+                    width: 65%;
+                }
+                &.html {
+                    background-color: $light-teal;
+                    width: 95%;
+                }
+                &.react {
+                    background-color: $light-teal;
+                    width: 60%;
+                }
+                &.java {
+                    background-color: $light-teal;
+                    width: 75%;
+                }
+                &.sql {
+                    background-color: $light-teal;
+                    width: 85%;
+                }
             }
         }
     }

@@ -4,12 +4,94 @@ header {
     height: 65vh;
     background-color: $soft-yellow;
     position: relative;
+    h1 {
+        width: 60%;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .3rem solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0;
+        animation: 
+            typing 2.5s steps(40, end),
+            blink-caret .75s step-end infinite;
+    } 
     #header-accent {
         position: absolute;
-        right:5%;
+        right:10%;
         bottom:-15%;
         img {
             width: 100%;
         }
     }
+    .animation-toggle {
+        text-align: right;
+        position:absolute;
+        bottom: 5%;
+        right:1%;
+
+        .animation-switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        border-radius: 50%;
+            & input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            }
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            border-radius: 34px;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            border-radius:50%;
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            border-radius: 34px;
+            background-color: $bright-pink;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        h5 {
+            opacity: 80%;
+            margin-bottom:10px;
+        }
+    }    
+}
+
+// animations for heading
+@keyframes typing {
+    from { width: 0 }
+    to { width: 60% }
+}
+
+@keyframes blink-caret {
+    from { border-color: transparent }
+    50% { border-color: orange }
 }

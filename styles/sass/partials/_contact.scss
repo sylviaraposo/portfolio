@@ -1,0 +1,37 @@
+.contact {
+    background-color: $light-teal;
+    color: white;
+    padding: 50px 0;
+    .wrapper {
+        display: flex;
+        justify-content: space-around;
+        .contact-text {
+            width: 40%;
+        }
+        .contact-form {
+            width: 40%;
+            input {
+                padding:12px;
+                width: 100%;
+                border:none;
+                margin:10px 0;
+                font-family: $secondary-font;
+                &:active, &:focus {
+                    outline:2px solid $bright-pink;
+                }
+            }
+            textarea {
+                margin-top:10px;
+                width: 100%;
+                padding:10px;
+                font-family: $secondary-font;
+                resize: none;
+                border:none;
+                &:active, &:focus {
+                    outline:2px solid $bright-pink;
+                }
+            }
+        }
+    }
+    
+}

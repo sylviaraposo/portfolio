@@ -10,20 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;700&family=Mulish:wght@300;400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="icon" href="./assets/fav.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/a763f0788e.js" crossorigin="anonymous"></script>
     
 </head>
-<body>
+<body id="home">
         <nav>
             <div class="wrapper">
                 <h3 id="name-logo">Sylvia</h3>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -38,99 +39,96 @@
             <div class="animation-toggle">
                 <h5>toggle animations</h5>
                 <label class="animation-switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="animation-check" checked>
                     <span class="slider"></span>
                 </label>
             </div>
         </div>
     </header> <!-- Header ENDS -->
 
+
     <!-- About Section -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="wrapper">
-            <div class="skills-chart">
-                <h3>I am a front-end <span class="blue-text">designer</span> & <span class="blue-text">developer</span> from Toronto, Ontario.</h3>
-                <h5>JAVASCRIPT</h5>
-                <!-- A container to be filled with the skill amount -->
-                <div class="progress-container">
-                    <div class="progress-amount js"></div>
-                </div>
-
-                <h5>HTML & CSS</h5>
-                <div class="progress-container">
-                    <div class="progress-amount html"></div>
-                </div>
-
-                <h5>SQL</h5>
-                <div class="progress-container">
-                    <div class="progress-amount sql"></div>
-                </div>
-
-                <h5>JAVA</h5>
-                <div class="progress-container">
-                    <div class="progress-amount java"></div>
-                </div>
-
-                <h5>REACT</h5>
-                <div class="progress-container">
-                    <div class="progress-amount react"></div>
-                </div>
+            <div class="img-container">
+                <img src="./assets/me.jpg" alt="sylvia standing on a tree">
+                
+            </div>
+            <div class="about-text animate-right">
+                <h4>about</h4>
+                <p>hello! I am a front-end <span class="blue-text">designer</span> & <span class="blue-text">developer</span> from Toronto, Ontario with an analytical mindset and 
+                passion for art and creativity. My focus surrounds on 
+                developing accessible, clean code and 
+                creating more engaging and inclusive 
+                user experiences.</p>
                 <button>let's chat</button>
             </div>
+                
 
-            <div class="interest-list">
-                <div class="interest-container">
-                    <i class="interests fas fa-solid fa-camera-retro fa-3x"></i>
-                    <h4>photography</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, nemo consequuntur perferendis commodi soluta harum!</p>
-                </div>
-                <div class="interest-container">
-                    <i class="interests fas fa-solid fa-pen fa-3x"></i>
-                    <h4>digital illustration</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, nemo consequuntur perferendis commodi soluta harum!</p>
-                </div>
-                <div class="interest-container">
-                    <i class="interests fas fa-solid fa-book fa-3x"></i>
-                    <h4>reading</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, nemo consequuntur perferendis commodi soluta harum!</p>
-                </div>
-                <div class="interest-container">
-                    <i class="interests fas fa-solid fa-mountain fa-3x"></i>
-                    <h4>traveling</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, nemo consequuntur perferendis commodi soluta harum!</p>
-                </div>
+            
+        </div>
+    </section>
+    
+    <!-- Skills Banner -->
+    <section class="skill-banner">
+        <div class="wrapper animate-down">
+            <div class="skill-info">
+                <i class="skills fab fa-brands fa-react fa-3x"></i>
+                <h5 class="skill-hover">React</h5>
+            </div>
+            <div class="skill-info">
+                <i class="skills fab fa-brands fa-html5 fa-3x"></i>
+                <h5 class="skill-hover">HTML5</h5>
+            </div>
+            <div class="skill-info">
+                <i class="skills fab fa-brands fa-css3-alt fa-3x"></i>
+                <h5 class="skill-hover">CSS3</h5>
+            </div>
+            <div class="skill-info">
+                <i class="skills fab fa-brands fa-sass fa-3x"></i>
+                <h5 class="skill-hover">Sass</h5>
+            </div>
+            <div class="skill-info">
+                <i class="skills fab fa-brands fa-js fa-3x"></i>
+                <h5 class="skill-hover">JavaScript</h5>
+            </div>
+            <div class="skill-info">
+                <i class="skills fab fa-brands fa-java fa-3x"></i>
+                <h5 class="skill-hover">Java</h5>
+            </div>
+            <div class="skill-info">
+                <i class="skills fab fa-brands fa-python fa-3x"></i>
+                <h5 class="skill-hover">Python</h5>
+            </div>
+            <div class="skill-info">
+                <i class="skills fab fa-brands fa-github fa-3x"></i>
+                <h5 class="skill-hover">Github</h5>
             </div>
         </div>
     </section>
 
-    <section class="skill-banner">
+    <section class="projects" id="projects">
         <div class="wrapper">
-            <i class="skills fab fa-brands fa-react fa-5x"></i>
-            <i class="skills fab fa-brands fa-html5 fa-5x"></i>
-            <i class="skills fab fa-brands fa-js fa-5x"></i>
-            <i class="skills fab fa-brands fa-java fa-5x"></i>
-            <i class="skills fab fa-brands fa-python fa-5x"></i>
-            <i class="skills fab fa-brands fa-github fa-5x"></i>
-        </div>
-    </section>
-
-    <section class="projects">
-        <div class="wrapper">
-            <div class="project-list">
+            <div class="project-list animate-left">
+                <h4 id="project-heading">my work.</h4>
                 <div class="project-info">
-                    <h3>studio ghibli quiz.</h3>
+                    <input type="radio" id="ghibli" name="projects" value="ghibli" checked>
+                    <label for="ghibli"><h3>studio ghibli quiz.</h3></label>
                     <h5>JAVASCRIPT | SCSS | PAIR-PROGRAMMING</h5>
                 </div>
                 <div class="project-info">
-                    <h3>dinner planner.</h3>
+                    <input type="radio" id="dinner" name="projects" value="dinner">
+                    <label for="dinner"><h3>dinner planner.</h3></label>
                     <h5>JQUERY | CSS | AJAX API</h5>
                 </div>
                 <div class="project-info">
-                    <h3>future project.</h3>
+                    <input type="radio" id="sanctuary" name="projects" value="sanctuary">
+                    <label for="sanctuary"><h3>sanctuary helpers.</h3></label>
                     <h5>JAVASCRIPT | SCSS | REST API</h5>
                 </div>
                 <div class="project-info">
-                    <h3>another cool project.</h3>
+                    <input type="radio" id="other" name="projects" value="other">
+                    <label for="other"><h3>dinner planner.</h3></label>
                     <h5>HTML5 | SCSS | REACT</h5>
                 </div>
             </div>
@@ -144,11 +142,11 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact animate-left" id="contact">
         <div class="wrapper">
             <div class="contact-text">
                 <h3>get in touch.</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit praesentium aut nemo, odit commodi aliquid optio!</p>
+                <p>Send me a message to discuss anything from coding and coffee to music and pictures of cute animals! <em>Especially</em> cute animals.</p>
 
                 <p>Toronto, Ontario.</p>
             </div>
@@ -164,7 +162,7 @@
                 </div>
 
                 <label for="message" class="sr-only">Message</label>
-                <textarea name="message" id="message" cols="30" rows="8" placeholder="Message"></textarea>
+                <textarea name="message" id="message" cols="30" rows="4" placeholder="Message"></textarea>
 
                 <button>send message</button>
             </form>
@@ -173,19 +171,28 @@
 
     <section class="map">
         <div id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d369103.67974154546!2d-79.65893357684361!3d43.71839365298183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1646242005266!5m2!1sen!2sca" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d369103.67974154546!2d-79.65893357684361!3d43.71839365298183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1646242005266!5m2!1sen!2sca"  width="100%" height="355px" frameborder="0" style="display:block" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
     <footer>
         <h2 id="footer-email">rapososylvia@gmail.com</h2>
-        <p>made with ❤ by Sylvia Raposo | 2022</p>
+        <p>made with ❤</p>
+        <p>2022</p>
         <ul class="social-media">
-            <li><a href="linkedin"></a></li>
-            <li><a href="twitter"></a></li>
-            <li><a href="gmail"></a></li>
+            <li><a href="linkedin"><i class="fab fa-brands fa-linkedin fa-2x"></i></a></li>
+            <li><a href="twitter"><i class="fab fa-brands fa-twitter fa-2x"></i></a></li>
+            <li><a href="gmail"><i class="fas fa-solid fa-envelope fa-2x"></i></a></li>
         </ul>
     </footer>
 
+    <div class="back-to-top">
+        <a href="#home">
+            <i class="fas fa-solid fa-chevron-up fa-3x"></i>
+            <h5 class="arrow-desc">back to top.</h5>
+        </a>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>

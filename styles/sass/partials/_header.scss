@@ -4,14 +4,17 @@ header {
     height: 65vh;
     background-color: $soft-yellow;
     position: relative;
+    .header-text {
+        width: max-content;
+    }
     h1 {
-        width: 60%;
+        width: 100%;
         overflow: hidden; /* Ensures the content is not revealed until the animation */
         border-right: .3rem solid orange; /* The typwriter cursor */
         white-space: nowrap; /* Keeps the content on a single line */
         margin: 0;
         animation: 
-            typing 2.5s steps(40, end),
+            typing 2.5s steps(30, end) forwards,
             blink-caret .75s step-end infinite;
     } 
     #header-accent {
@@ -22,25 +25,24 @@ header {
             width: 100%;
         }
     }
+    
     .animation-toggle {
         text-align: right;
         position:absolute;
         bottom: 5%;
         right:1%;
-
         .animation-switch {
-        position: relative;
-        display: inline-block;
-        width: 60px;
-        height: 34px;
-        border-radius: 50%;
-            & input {
-            opacity: 0;
-            width: 0;
-            height: 0;
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            border-radius: 50%;
+                & input {
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
             }
-        }
-
         .slider {
             position: absolute;
             cursor: pointer;
@@ -88,7 +90,7 @@ header {
 // animations for heading
 @keyframes typing {
     from { width: 0 }
-    to { width: 60% }
+    to { width: 100% }
 }
 
 @keyframes blink-caret {

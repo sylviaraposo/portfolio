@@ -236,15 +236,23 @@ body {
 }
 
 .wrapper {
-  width: 85%;
+  width: 80%;
   margin: 0 auto;
   max-width: 1900px;
+}
+
+img {
+  max-width: 100%;
 }
 
 li {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+p {
+  line-height: 2;
 }
 
 a {
@@ -267,6 +275,11 @@ button {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 1px;
+  transition: all 0.6s ease-out;
+}
+button:hover {
+  border-radius: 60px;
+  cursor: pointer;
 }
 
 i.interests {
@@ -274,15 +287,6 @@ i.interests {
 }
 i.skills {
   color: white;
-}
-
-html {
-  font-size: 125%;
-  font-family: "Montserrat", sans-serif;
-}
-
-p {
-  font-family: "Mulish", sans-serif;
 }
 
 a {
@@ -293,8 +297,12 @@ a {
 
 h1 {
   color: #ed3363;
-  font-size: 6rem;
+  font-size: 5rem;
   margin-top: -10px;
+}
+
+input:checked {
+  opacity: 0;
 }
 
 h2 {
@@ -312,12 +320,50 @@ h4 {
 h4::after {
   content: "";
   position: absolute;
-  width: 100%;
   height: 12px;
   top: 55%;
-  right: 0;
+  left: 0;
+  width: 30%;
   z-index: -1;
   background-color: #fdf3b3;
+}
+
+.img-container {
+  width: 40%;
+  padding: 15px 15px 55px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+  opacity: 0;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  text-align: center;
+  opacity: 70%;
+  font-size: 2rem;
+  color: #ed3363;
+}
+.back-to-top .arrow-desc {
+  margin: 0;
+  opacity: 0;
+}
+.back-to-top:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.back-to-top:hover .arrow-desc {
+  opacity: 1;
+}
+
+html {
+  font-size: 125%;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-family: "Mulish", sans-serif;
 }
 
 nav {
@@ -333,6 +379,25 @@ nav .wrapper ul {
 nav .wrapper ul li {
   padding-left: 20px;
 }
+nav .wrapper ul li:hover {
+  color: #ed3363;
+}
+nav .wrapper ul li:hover::after {
+  opacity: 1;
+}
+nav .wrapper ul li:hover::before {
+  opacity: 1;
+}
+nav .wrapper ul li::after {
+  color: #ed3363;
+  content: " }";
+  opacity: 0;
+}
+nav .wrapper ul li::before {
+  color: #ed3363;
+  content: "{ ";
+  opacity: 0;
+}
 nav .wrapper #name-logo {
   opacity: 0;
 }
@@ -344,8 +409,13 @@ header {
   background-color: #fdf3b3;
   position: relative;
 }
+header .header-text {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
 header h1 {
-  width: 60%;
+  width: 100%;
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
   border-right: 0.3rem solid orange;
@@ -353,8 +423,8 @@ header h1 {
   white-space: nowrap;
   /* Keeps the content on a single line */
   margin: 0;
-  -webkit-animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
-          animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  -webkit-animation: typing 2.5s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+          animation: typing 2.5s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
 }
 header #header-accent {
   position: absolute;
@@ -424,7 +494,7 @@ header .animation-toggle h5 {
     width: 0;
   }
   to {
-    width: 60%;
+    width: 100%;
   }
 }
 
@@ -433,7 +503,7 @@ header .animation-toggle h5 {
     width: 0;
   }
   to {
-    width: 60%;
+    width: 100%;
   }
 }
 @-webkit-keyframes blink-caret {
@@ -460,52 +530,19 @@ header .animation-toggle h5 {
   margin-top: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-.about .wrapper .skills-chart {
-  width: 35%;
-}
-.about .wrapper .skills-chart h3 {
-  color: #ed3363;
-}
-.about .wrapper .interest-list {
-  text-align: center;
-  width: 60%;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
 }
-.about .wrapper .interest-list .interest-container {
-  width: calc(40% - 40px);
-  margin: 40px;
+.about .wrapper .about-text {
+  width: 45%;
+  opacity: 0;
 }
-.about .wrapper .progress-container {
-  width: 100%;
-  height: 8px;
-  background-color: lightgrey;
+.about .wrapper .img-container {
+  width: 30%;
 }
-.about .wrapper .progress-container .progress-amount {
-  height: 8px;
-}
-.about .wrapper .progress-container .progress-amount.js {
-  background-color: #00bec5;
-  width: 65%;
-}
-.about .wrapper .progress-container .progress-amount.html {
-  background-color: #00bec5;
-  width: 95%;
-}
-.about .wrapper .progress-container .progress-amount.react {
-  background-color: #00bec5;
-  width: 60%;
-}
-.about .wrapper .progress-container .progress-amount.java {
-  background-color: #00bec5;
-  width: 75%;
-}
-.about .wrapper .progress-container .progress-amount.sql {
-  background-color: #00bec5;
-  width: 85%;
+.about .wrapper .img-container::after {
+  content: "";
+  background-image: url("../assets/ellipse.png");
+  background-size: cover;
 }
 
 .skill-banner {
@@ -513,14 +550,35 @@ header .animation-toggle h5 {
   height: 25vh;
 }
 .skill-banner .wrapper {
+  opacity: 0;
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
   align-items: center;
+  margin-top: 50px;
   justify-content: space-around;
+}
+.skill-banner .skill-info {
+  text-align: center;
+}
+.skill-banner .skill-info .skills {
+  align-self: center;
+  padding-top: 40px;
+  justify-self: center;
+  align-items: center;
+  justify-items: center;
+}
+.skill-banner .skill-info .skill-hover {
+  opacity: 0;
+  margin-top: 5px;
+  transition: all 1s ease-out;
+  color: white;
+}
+.skill-banner .skill-info:hover .skill-hover {
+  opacity: 1;
 }
 
 .projects {
-  height: 75vh;
   margin: 80px 0;
   position: relative;
 }
@@ -531,7 +589,6 @@ header .animation-toggle h5 {
 }
 .projects .wrapper .project-image {
   width: 45%;
-  box-shadow: 2px 2px 5px;
 }
 .projects .wrapper .project-image .img-container {
   width: 100%;
@@ -541,17 +598,34 @@ header .animation-toggle h5 {
   display: block;
   width: 100%;
 }
+.projects .wrapper .project-list {
+  opacity: 0;
+}
 .projects .wrapper h3 {
   margin-bottom: 0;
 }
-.projects .wrapper h3:hover {
+.projects .wrapper h3:hover, .projects .wrapper h3:active, .projects .wrapper h3:focus {
   color: #ed3363;
   cursor: pointer;
 }
-.projects .wrapper h3:hover::after {
+.projects .wrapper h3:hover::after, .projects .wrapper h3:active::after, .projects .wrapper h3:focus::after {
   opacity: 1;
 }
 .projects .wrapper h3::after {
+  content: "➙";
+  padding-left: 10px;
+  opacity: 0;
+}
+.projects .wrapper label {
+  padding-bottom: 0;
+}
+.projects .wrapper input {
+  display: none;
+}
+.projects .wrapper input:checked + label {
+  color: #ed3363;
+}
+.projects .wrapper input:checked + label:checked::after {
   content: "➙";
   padding-left: 10px;
   opacity: 0;
@@ -572,4 +646,66 @@ header .animation-toggle h5 {
   right: -6%;
   z-index: -1;
   top: -5%;
+}
+
+.contact {
+  background-color: #00bec5;
+  color: white;
+  padding: 50px 0;
+}
+.contact .wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.contact .wrapper .contact-text {
+  width: 40%;
+}
+.contact .wrapper .contact-form {
+  width: 40%;
+}
+.contact .wrapper .contact-form input {
+  padding: 12px;
+  width: 100%;
+  border: none;
+  margin: 10px 0;
+  font-family: "Mulish", sans-serif;
+}
+.contact .wrapper .contact-form input:active, .contact .wrapper .contact-form input:focus {
+  outline: 2px solid #ed3363;
+}
+.contact .wrapper .contact-form textarea {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  font-family: "Mulish", sans-serif;
+  resize: none;
+  border: none;
+}
+.contact .wrapper .contact-form textarea:active, .contact .wrapper .contact-form textarea:focus {
+  outline: 2px solid #ed3363;
+}
+
+footer {
+  background-color: #fdf3b3;
+  margin: 0;
+  padding: 50px;
+  text-align: center;
+  color: #1f0e49;
+}
+footer h2 {
+  margin: 20px;
+}
+footer p {
+  padding: 0;
+  margin: 5px;
+}
+footer .social-media {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  margin-top: 0;
+}
+footer .social-media li {
+  padding: 20px;
 }

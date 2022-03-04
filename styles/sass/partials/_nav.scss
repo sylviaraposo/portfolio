@@ -8,6 +8,26 @@ nav {
             display: flex;
             li {
                 padding-left: 20px;
+                &:hover {    
+                    color:$bright-pink;
+                    &::after {
+                        opacity: 1;  
+                    }
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+
+                &::after {
+                    color:$bright-pink;
+                    content: ' }';
+                    opacity: 0;  
+                }
+                &::before {
+                    color:$bright-pink;
+                    content: '{ ';
+                    opacity: 0;  
+                }
             }
         }
 
@@ -15,6 +35,8 @@ nav {
         #name-logo {
             opacity: 0;
         }
+
+
     }
 
 }

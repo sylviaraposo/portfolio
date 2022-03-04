@@ -2,9 +2,31 @@
     background-color: $light-teal;
     height:25vh;
     .wrapper {  
+        opacity: 0;
         display: flex;
+        flex-wrap: wrap;
         height:100%;
         align-items: center;
+        margin-top: 50px;
         justify-content: space-around;
+    }
+    .skill-info {
+        text-align: center;
+        .skills {
+            align-self: center;
+            padding-top:40px;
+            justify-self: center;
+            align-items: center;
+            justify-items: center;
+        }
+        .skill-hover {
+            opacity: 0;
+            margin-top:5px;
+            transition: all 1s ease-out;
+            color:white;
+        }
+        &:hover .skill-hover {
+            opacity: 1;
+        }
     }
 }

@@ -73,10 +73,35 @@ portfolioApp.inViewAnimation = function () {
     }, false);
 }
 
+portfolioApp.projectView = function () {
+    let imageElement = document.querySelector('.selected-project-img');
+    let selectedAnswer = document.querySelector('input[name="project-choices"]:checked');
+    let projectList = document.querySelectorAll('input[name="project-choices"]')
+    
+
+    projectList.forEach(project => {
+        project.addEventListener('change', function () {
+            console.log(project.value);
+            imageElement.src = `./assets/${project.value}.jpg`;
+            imageElement.alt = `A screenshot from my ${project.value} web-development project.`;
+
+        })
+    });
+    
+
+
+    
+
+
+    console.log(selectedAnswer);
+
+}
+
 portfolioApp.init = function () {
 
     portfolioApp.animationToggle();
     portfolioApp.inViewAnimation();
+    portfolioApp.projectView();
 
 
 }

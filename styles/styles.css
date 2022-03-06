@@ -697,7 +697,7 @@ header .animation-toggle h5 {
 .projects #grey-illustration {
   position: absolute;
   height: 30%;
-  right: -40px;
+  right: 0px;
   top: -20%;
 }
 .projects #ellipse {

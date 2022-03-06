@@ -375,13 +375,16 @@ nav {
 }
 nav .wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 nav .wrapper ul {
   display: flex;
 }
 nav .wrapper ul li {
-  padding-left: 20px;
+  padding-left: 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 nav .wrapper ul li:hover {
   color: #ed3363;

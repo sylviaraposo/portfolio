@@ -2,12 +2,13 @@ nav {
     background-color: $soft-yellow;
     .wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
 
         ul {
             display: flex;
             li {
-                padding-left: 20px;
+                padding-left:10px;
+                width: max-content;
                 &:hover {    
                     color:$bright-pink;
                     &::after {

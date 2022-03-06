@@ -18,21 +18,29 @@
     }
     .skill-banner {
         height:50vh;
-        .wrapper {
-            width: 70%;
-            flex-direction: column;
-        }
+        
     }
 
     .projects {
         margin:50px 0;
         .wrapper {
-            h3:hover,h3:focus, h3:active {
-                color:black;
+            .project-list{
+                margin-left: 50px;
+                h3 {
+                font-size: 1.5rem;
+                    &:hover,&:focus, &:active {
+                        color:black;
+                        cursor: default;
+                    }
+                }
+                h5 {
+                    font-size: .65rem;
+                }
+                input:checked + label {   
+                    color:black;    
+                }
             }
-            input:checked + label {   
-                        color:black;    
-            }
+            
         }
     }
 

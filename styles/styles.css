@@ -566,14 +566,19 @@ header .animation-toggle h5 {
   height: 100%;
   align-items: center;
   margin-top: 50px;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .skill-banner .skill-info {
   text-align: center;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
 }
 .skill-banner .skill-info .skills {
   align-self: center;
-  padding-top: 40px;
   justify-self: center;
   align-items: center;
   justify-items: center;
@@ -777,18 +782,24 @@ footer .social-media li {
   .skill-banner {
     height: 50vh;
   }
-  .skill-banner .wrapper {
-    width: 70%;
-    flex-direction: column;
-  }
 
   .projects {
     margin: 50px 0;
   }
-  .projects .wrapper h3:hover, .projects .wrapper h3:focus, .projects .wrapper h3:active {
-    color: black;
+  .projects .wrapper .project-list {
+    margin-left: 50px;
   }
-  .projects .wrapper input:checked + label {
+  .projects .wrapper .project-list h3 {
+    font-size: 1.5rem;
+  }
+  .projects .wrapper .project-list h3:hover, .projects .wrapper .project-list h3:focus, .projects .wrapper .project-list h3:active {
+    color: black;
+    cursor: default;
+  }
+  .projects .wrapper .project-list h5 {
+    font-size: 0.65rem;
+  }
+  .projects .wrapper .project-list input:checked + label {
     color: black;
   }
 

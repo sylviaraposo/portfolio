@@ -8,13 +8,21 @@
         height:100%;
         align-items: center;
         margin-top: 50px;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     .skill-info {
         text-align: center;
+        width: 80px;
+        // margin:10px;
+        // border:1px solid black;
+        height:80px;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
         .skills {
             align-self: center;
-            padding-top:40px;
+            // padding-top:40px;
             justify-self: center;
             align-items: center;
             justify-items: center;

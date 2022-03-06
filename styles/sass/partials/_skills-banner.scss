@@ -19,15 +19,16 @@
             flex-direction: column;
             .skills {
                 align-self: center;
-                justify-self: center;
-                align-items: center;
-                justify-items: center;
+                transition: all ease 1s;
             }
             .skill-hover {
                 opacity: 0;
                 margin-top:5px;
-                transition: all 1s ease-out;
+                transition: all .6s ease;
                 color:white;
+            }
+            &:hover .skills {
+                font-size: 3.5rem;
             }
             &:hover .skill-hover {
                 opacity: 1;

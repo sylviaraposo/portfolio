@@ -12,7 +12,12 @@
             opacity: 0;
         }
         .img-container {
-            width: 30%;
+            width: 35%;
+            box-shadow: none;
+            img {
+                border-radius: 33% 67% 58% 42% / 65% 66% 34% 35% ;
+                box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+            }
         }
         .img-container::after {
             content: '';

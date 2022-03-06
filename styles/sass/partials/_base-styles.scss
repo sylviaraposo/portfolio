@@ -24,28 +24,44 @@ p {
 a {
     text-decoration: none;
     color:inherit;
-    letter-spacing: 1px;
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-family: $primary-font;
 }
 
 .blue-text {
     color: $light-teal;
 }
 
+.pink-text {
+    color: $bright-pink;
+}
+
 button {
-    text-transform: uppercase;
-    border: none;
-    margin-top:60px;
-    background-color: $bright-pink;
-    padding: 20px 50px;
-    color: white;
-    font-size: .75rem;
+    font-size: 0.6rem;
     font-weight: 600;
-    letter-spacing: 1px;
-    transition: all .6s ease-out;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-family: $primary-font;
+    text-transform: uppercase;
+    background-color: $bright-pink;
+    border:none;
+    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+    cursor: pointer;
+    padding: 20px 40px;
+    margin-top:30px;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    color: white;
+    display: flex;
+    align-items: center;
     &:hover {
-        // background-color:$soft-yellow;
-        border-radius: 60px;
-        // color:black;
+        border-radius: 50px;
         cursor: pointer;
     }
 }
@@ -60,11 +76,6 @@ i {
     
 }
 
-a {
-    font-size: 0.6rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
 
 h1 {
     color: $bright-pink;
@@ -132,3 +143,5 @@ h6 {
         }
     }   
 }
+
+// animation for rainbow text on buttons

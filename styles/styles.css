@@ -704,7 +704,7 @@ header .animation-toggle h5 {
 .projects #ellipse {
   position: absolute;
   height: 30%;
-  right: -6%;
+  right: 0%;
   z-index: -1;
   top: -5%;
 }

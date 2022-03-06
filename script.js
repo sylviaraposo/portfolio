@@ -25,6 +25,7 @@ portfolioApp.animationToggle = function () {
     };
 }
 
+// a function to check have animations triggered when user scrolls to divs with an animation 
 portfolioApp.inViewAnimation = function () {
     let isInViewport = function (element) {
         let distance = element.getBoundingClientRect();
@@ -74,6 +75,25 @@ portfolioApp.inViewAnimation = function () {
 }
 
 portfolioApp.projectView = function () {
+
+    // a listener for the bounce animation
+    let speechBubbles = document.querySelectorAll('.speech-bubble')
+    
+    speechBubbles.forEach(speechBubble => {
+        speechBubble.addEventListener('mouseover', function () {
+            speechBubble.classList.add('animate__animated')
+            speechBubble.classList.add('animate__pulse')
+        }) 
+        speechBubble.addEventListener('mouseout', function () {
+            speechBubble.classList.remove('animate__animated')
+            speechBubble.classList.remove('animate__pulse')
+
+        }) 
+
+    });
+    
+    console.log(speechBubbles);
+
     let imageElement = document.querySelector('.selected-project-img');
     let selectedAnswer = document.querySelector('input[name="project-choices"]:checked');
     let projectList = document.querySelectorAll('input[name="project-choices"]')
@@ -81,7 +101,7 @@ portfolioApp.projectView = function () {
 
     projectList.forEach(project => {
         project.addEventListener('change', function () {
-            console.log(project.value);
+            
             imageElement.src = `./assets/${project.value}.jpg`;
             imageElement.alt = `A screenshot from my ${project.value} web-development project.`;
 
@@ -89,13 +109,8 @@ portfolioApp.projectView = function () {
     });
     
 
-
-    
-
-
-    console.log(selectedAnswer);
-
 }
+
 
 portfolioApp.init = function () {
 

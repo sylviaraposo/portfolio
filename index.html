@@ -37,7 +37,7 @@
                 <img src="./assets/illustration.png" alt="" id="header-accent">
             </div>
             <div class="animation-toggle">
-                <h5>toggle animations</h5>
+                <h5>toggle cursor flash</h5>
                 <label class="animation-switch">
                     <input type="checkbox" id="animation-check" checked>
                     <span class="slider"></span>
@@ -50,10 +50,7 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="wrapper">
-            <div class="img-container">
-                <img src="./assets/me.jpg" alt="sylvia standing on a tree">
-                
-            </div>
+            
             <div class="about-text animate-right">
                 <h4>about</h4>
                 <p>hello! I am a front-end <span class="blue-text">designer</span> & <span class="blue-text">developer</span> from Toronto, Ontario with an analytical mindset and 
@@ -61,7 +58,11 @@
                 developing accessible, clean code and 
                 creating more engaging and inclusive 
                 user experiences.</p>
-                <button>let's chat</button>
+                <button><a href="#projects"> check out my work</a></button>
+            </div>
+            <div class="img-container">
+                <img src="./assets/me.jpg" alt="sylvia standing on a tree">
+                
             </div>
                 
 
@@ -110,27 +111,46 @@
     <section class="projects" id="projects">
         <div class="wrapper">
             <div class="project-list animate-left">
-                <h4 id="project-heading">my work.</h4>
+                <h4 id="project-heading">projects.</h4>
                 <div class="project-info">
                     <input class="choices" type="radio" id="ghibli" name="project-choices" value="ghibli" checked>
                     <label for="ghibli"><h3>studio ghibli quiz.</h3></label>
                     <h5>JAVASCRIPT | SCSS | PAIR-PROGRAMMING | REST API</h5>
+                    <div class="live-links">
+                        <div class="speech-bubble ghibli-link">
+                            <a href="https://github.com/allisonvilla/ghibli-movie-night" target="_blank">github</a>
+                        </div>
+                        <div class="speech-bubble ghibli-link">
+                            <a href="https://ghibli-movie-night.netlify.app" target="_blank">live</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-info">
                     <input class="choices" type="radio" id="dinner" name="project-choices" value="dinner">
                     <label for="dinner"><h3>dinner planner.</h3></label>
                     <h5>JQUERY | CSS | AJAX API</h5>
+                    <div class="live-links">
+                        <div class="speech-bubble dinner-link">
+                            <a href="github">github</a>
+                        </div>
+                        <div class="speech-bubble dinner-link">
+                            <a href="github">live</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-info">
                     <input class="choices" type="radio" id="gilmore" name="project-choices" value="gilmore">
                     <label for="gilmore"><h3>gilmore girls quiz.</h3></label>
                     <h5>JAVASCRIPT | HTML5 | CSS3 </h5>
+                    <div class="live-links">
+                        <div class="speech-bubble gilmore-link">
+                            <a href="github">github</a>
+                        </div>
+                        <div class="speech-bubble gilmore-link">
+                            <a href="github">live</a>
+                        </div>
+                    </div>
                 </div>
-                <!-- <div class="project-info">
-                    <input class="choices" type="radio" id="other" name="project-choices" value="other">
-                    <label for="other"><h3>dinner planner.</h3></label>
-                    <h5>HTML5 | SCSS | REACT</h5>
-                </div> -->
             </div>
             <div class="project-image">
                 <div class="img-container">
@@ -151,7 +171,9 @@
                 <p>Toronto, Ontario.</p>
             </div>
             <!-- Contact Form -->
-            <form action="" class="contact-form">
+            <form action="https://formsubmit.co/rapososylvia@gmail.com" 
+            method="POST"
+            class="contact-form">
 
                 <div class="top-row-contact">
                     <label for="name" class="sr-only">Name</label>
@@ -176,13 +198,13 @@
     </section>
 
     <footer>
-        <h2 id="footer-email">rapososylvia@gmail.com</h2>
+        <h2 id="footer-email"><a href = "mailto: rapososylvia@gmail.com">rapososylvia@gmail.com</a></h2>
         <p>made with ❤</p>
         <p>2022</p>
         <ul class="social-media">
-            <li><a href="linkedin"><i class="fab fa-brands fa-linkedin fa-2x"></i></a></li>
-            <li><a href="twitter"><i class="fab fa-brands fa-twitter fa-2x"></i></a></li>
-            <li><a href="gmail"><i class="fas fa-solid fa-envelope fa-2x"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/sylviaraposo"><i class="fab fa-brands fa-linkedin fa-2x"></i></a></li>
+            <li><a href="https://twitter.com/sylviadotcom_"><i class="fab fa-brands fa-twitter fa-2x"></i></a></li>
+            <li><a href="mailto: rapososylvia@gmail.com"><i class="fas fa-solid fa-envelope fa-2x"></i></a></li>
         </ul>
     </footer>
 

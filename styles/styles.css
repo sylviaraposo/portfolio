@@ -279,6 +279,7 @@ button {
   letter-spacing: 0.1rem;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
+  margin: 0 auto;
   background-color: #ed3363;
   border: none;
   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
@@ -789,6 +790,10 @@ footer .social-media li {
 
   h2 {
     font-size: 1rem;
+  }
+
+  nav .wrapper {
+    margin-right: 0;
   }
 
   .about .wrapper {

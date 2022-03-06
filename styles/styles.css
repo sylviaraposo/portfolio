@@ -278,8 +278,10 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-family: "Montserrat", sans-serif;
+  width: 60%;
   text-transform: uppercase;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
   background-color: #ed3363;
   border: none;
   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
@@ -545,7 +547,7 @@ header .animation-toggle h5 {
 }
 .about {
   margin-top: 80px;
-  margin-bottom: 110px;
+  margin-bottom: 80px;
 }
 .about .wrapper {
   margin-top: 70px;
@@ -612,7 +614,7 @@ header .animation-toggle h5 {
 }
 
 .projects {
-  margin: 0;
+  margin: 50px 0;
   position: relative;
 }
 .projects .wrapper {
@@ -711,7 +713,7 @@ header .animation-toggle h5 {
 .contact {
   background-color: #00bec5;
   color: white;
-  padding: 50px 0;
+  padding: 75px 0;
 }
 .contact .wrapper {
   display: flex;
@@ -755,31 +757,44 @@ footer {
   margin: 0;
   padding: 50px;
   text-align: center;
-  color: #1f0e49;
+  padding-bottom: 50px;
+  position: relative;
 }
-footer h2 {
+footer #footer-email {
   margin: 20px;
 }
-footer h2 a {
+footer #footer-email a {
   text-transform: lowercase;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  color: #ed3363;
+  font-weight: 400;
 }
 footer p {
   padding: 0;
-  margin: 0px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1;
+  opacity: 40%;
+  margin-top: 40px;
   font-family: "Montserrat", sans-serif;
+}
+footer hr {
+  opacity: 50%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 50%;
 }
 footer .social-media {
   display: flex;
   justify-content: center;
   padding: 0;
   margin: 0;
+  color: #ed3363;
   margin-top: 0;
 }
 footer .social-media li {
   padding: 20px;
+  margin-top: -10px;
 }
 
 @media (max-width: 800px) {
@@ -807,6 +822,11 @@ footer .social-media li {
 
   .skill-banner {
     height: 50vh;
+  }
+
+  button {
+    margin: 0 auto;
+    margin-top: 50px;
   }
 
   .projects {

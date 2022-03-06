@@ -4,31 +4,42 @@ footer {
     margin:0;
     padding:50px;
     text-align: center;
-    color: $dark-blue;
-    h2 {
+    padding-bottom: 50px;
+    position: relative;
+    #footer-email {
         margin:20px;
         a {
             text-transform: lowercase;
-            font-size: 2rem;
+            font-size: 1.8rem;
+            font-family: $primary-font;
+            color: $bright-pink;
+            font-weight: 400;
         }
-    }
-        
+    } 
     p {
         padding:0;
-        margin: 0px;
-        font-size: 1rem;
+        font-size: .8rem;
         line-height: 1;
+        opacity: 40%;
+        margin-top:40px;
         font-family: $primary-font;
-    
+    }
+    hr {
+        opacity: 50%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 50%;
     }
     .social-media {
         display: flex; 
         justify-content: center;
         padding:0;
         margin:0;
+        color: $bright-pink;
         margin-top:0;
         li {
             padding: 20px;
+            margin-top: -10px;
         }
     }
 }

@@ -436,7 +436,6 @@ header .header-text {
   transition: ease all 0.5s;
 }
 header h1 {
-  width: 100%;
   transition: ease all 0.5s;
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
@@ -814,7 +813,8 @@ footer .social-media li {
     margin: 50px 0;
   }
   .projects .wrapper .project-list {
-    margin-left: 50px;
+    padding-left: 20px;
+    opacity: 1;
   }
   .projects .wrapper .project-list h3 {
     font-size: 1.5rem;
@@ -828,6 +828,9 @@ footer .social-media li {
   }
   .projects .wrapper .project-list input:checked + label {
     color: black;
+  }
+  .projects .wrapper .project-image {
+    display: none;
   }
 
   .contact .wrapper {

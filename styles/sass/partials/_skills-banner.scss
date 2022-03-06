@@ -9,32 +9,30 @@
         align-items: center;
         margin-top: 50px;
         justify-content: space-evenly;
-    }
-    .skill-info {
-        text-align: center;
-        width: 80px;
-        // margin:10px;
-        // border:1px solid black;
-        height:80px;
-        display: flex;
-        align-items: center;
-        justify-items: center;
-        flex-direction: column;
-        .skills {
-            align-self: center;
-            // padding-top:40px;
-            justify-self: center;
+        .skill-info {
+            text-align: center;
+            width: 80px;
+            height:80px;
+            display: flex;
             align-items: center;
             justify-items: center;
-        }
-        .skill-hover {
-            opacity: 0;
-            margin-top:5px;
-            transition: all 1s ease-out;
-            color:white;
-        }
-        &:hover .skill-hover {
-            opacity: 1;
+            flex-direction: column;
+            .skills {
+                align-self: center;
+                justify-self: center;
+                align-items: center;
+                justify-items: center;
+            }
+            .skill-hover {
+                opacity: 0;
+                margin-top:5px;
+                transition: all 1s ease-out;
+                color:white;
+            }
+            &:hover .skill-hover {
+                opacity: 1;
+            }
         }
     }
+    
 }

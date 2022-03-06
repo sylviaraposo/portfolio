@@ -568,7 +568,7 @@ header .animation-toggle h5 {
   margin-top: 50px;
   justify-content: space-evenly;
 }
-.skill-banner .skill-info {
+.skill-banner .wrapper .skill-info {
   text-align: center;
   width: 80px;
   height: 80px;
@@ -577,19 +577,19 @@ header .animation-toggle h5 {
   justify-items: center;
   flex-direction: column;
 }
-.skill-banner .skill-info .skills {
+.skill-banner .wrapper .skill-info .skills {
   align-self: center;
   justify-self: center;
   align-items: center;
   justify-items: center;
 }
-.skill-banner .skill-info .skill-hover {
+.skill-banner .wrapper .skill-info .skill-hover {
   opacity: 0;
   margin-top: 5px;
   transition: all 1s ease-out;
   color: white;
 }
-.skill-banner .skill-info:hover .skill-hover {
+.skill-banner .wrapper .skill-info:hover .skill-hover {
   opacity: 1;
 }
 

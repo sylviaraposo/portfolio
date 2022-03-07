@@ -106,7 +106,33 @@ portfolioApp.projectView = function () {
 
 }
 
+portfolioApp.formValidation = function () {
+    form = document.querySelector('.contact-form');
+    nameInput = document.getElementById('name');
+    messageInput = document.getElementById('message');
+    emailInput = document.getElementById('email');
+    // console.log(nameInput);
 
+    form.addEventListener('submit', function(event){
+        event.preventDefault();
+
+        if(nameInput.value === '') {
+            alert('Uh oh! 😔 I think you forgot your name! Please try again. 💌')
+            nameInput.focus();
+        }
+        else if (emailInput.value === '') {
+            alert('Uh oh! 😔 I think you forgot to include your email! Let me know where to reach you! 💌')
+            emailInput.focus();   
+        } 
+        else if (messageInput.value === '') {
+            alert('Uh oh! 😔 I think you forgot to write a message! Please try again. 💌')
+            messageInput.focus();
+        } else {
+            form.submit();
+        }
+        
+    })
+}
 
 
 portfolioApp.init = function () {
@@ -124,7 +150,9 @@ portfolioApp.init = function () {
     portfolioApp.animationToggle();
     portfolioApp.inViewAnimation();
     portfolioApp.projectView();
-    portfolioApp.footerAnimation();
+    portfolioApp.formValidation();
+
+    
 
 
 }

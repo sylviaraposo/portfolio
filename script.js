@@ -111,7 +111,6 @@ portfolioApp.formValidation = function () {
     nameInput = document.getElementById('name');
     messageInput = document.getElementById('message');
     emailInput = document.getElementById('email');
-    // console.log(nameInput);
 
     form.addEventListener('submit', function(event){
         event.preventDefault();

@@ -95,7 +95,6 @@ portfolioApp.projectView = function () {
     console.log(speechBubbles);
 
     let imageElement = document.querySelector('.selected-project-img');
-    let selectedAnswer = document.querySelector('input[name="project-choices"]:checked');
     let projectList = document.querySelectorAll('input[name="project-choices"]')
     
 

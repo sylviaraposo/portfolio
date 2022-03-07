@@ -14,7 +14,11 @@ footer {
             font-family: $primary-font;
             color: $bright-pink;
             font-weight: 400;
+            &:hover {
+                font-weight: 600;
+            }
         }
+        
     } 
     p {
         padding:0;

@@ -278,7 +278,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-family: "Montserrat", sans-serif;
-  width: 60%;
+  width: 40%;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -298,7 +298,8 @@ button {
   align-items: center;
 }
 button:hover {
-  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.3) 5px 14px 9px -5px;
+  border: none;
   cursor: pointer;
 }
 
@@ -770,6 +771,9 @@ footer #footer-email a {
   color: #ed3363;
   font-weight: 400;
 }
+footer #footer-email a:hover {
+  font-weight: 600;
+}
 footer p {
   padding: 0;
   font-size: 0.8rem;
@@ -834,7 +838,6 @@ footer .social-media li {
   }
   .projects .wrapper .project-list {
     padding-left: 20px;
-    opacity: 1;
   }
   .projects .wrapper .project-list h3 {
     font-size: 1.5rem;

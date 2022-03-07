@@ -45,7 +45,7 @@ button {
     text-transform: uppercase;
     letter-spacing: .1rem;
     font-family: $primary-font;
-    width: 60%;
+    width: 40%;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
@@ -64,7 +64,9 @@ button {
     display: flex;
     align-items: center;
     &:hover {
-        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, .3) 5px 14px 9px -5px;
+        border:none;
+        // border-radius: 50px;
         cursor: pointer;
     }
 }
@@ -141,6 +143,7 @@ h6 {
     &:hover {
         cursor: pointer;
         opacity: 1;
+        
         .arrow-desc {
             opacity: 1;
         }

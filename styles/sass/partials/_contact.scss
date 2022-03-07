@@ -23,6 +23,7 @@
                 &:active, &:focus {
                     outline:2px solid $bright-pink;
                     transform: translate3d(0, -3px, 0);
+                    box-shadow: rgba(0, 0, 0, .3) 4px 12px 7px -5px;
                 }
             }
             textarea {
@@ -38,6 +39,7 @@
                 &:active, &:focus {
                     transform: translate3d(0, -3px, 0);
                     outline:2px solid $bright-pink;
+        box-shadow: rgba(0, 0, 0, .3) 5px 14px 9px -5px;
                 }
             }
         }

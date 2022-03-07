@@ -724,9 +724,11 @@ header .animation-toggle h5 {
 }
 .contact .wrapper .contact-text {
   width: 40%;
+  opacity: 0;
 }
 .contact .wrapper .contact-form {
   width: 40%;
+  opacity: 0;
 }
 .contact .wrapper .contact-form input {
   border-radius: 6px;
@@ -770,6 +772,10 @@ footer {
 }
 footer #footer-email {
   margin: 20px;
+  transition: all ease 740ms;
+}
+footer #footer-email:hover {
+  transform: translate3d(0, -4px, 0);
 }
 footer #footer-email a {
   text-transform: lowercase;
@@ -777,9 +783,11 @@ footer #footer-email a {
   font-family: "Montserrat", sans-serif;
   color: #ed3363;
   font-weight: 400;
+  transition: all ease 740ms;
 }
 footer #footer-email a:hover {
-  font-weight: 600;
+  font-size: 1.9rem;
+  letter-spacing: 2.75px;
 }
 footer p {
   padding: 0;
@@ -810,6 +818,9 @@ footer .social-media li {
 }
 footer .social-media li:hover {
   transform: translate3d(0, -4px, 0);
+}
+footer .footer-text {
+  opacity: 0;
 }
 
 @media (max-width: 800px) {

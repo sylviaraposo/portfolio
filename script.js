@@ -1,17 +1,8 @@
 const portfolioApp = {}
 
-// a function to allow for smooth scrolling from links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
 
 
+// a function to hold the animation toggle
 portfolioApp.animationToggle = function () {
     let animationSwitch = document.getElementById('animation-check');
 
@@ -38,38 +29,44 @@ portfolioApp.inViewAnimation = function () {
     };
 
     let images = document.querySelectorAll('.img-container');
-    let rightAnimate = document.querySelector('.animate-right');
+    let rightAnimate = document.querySelectorAll('.animate-right');
     let leftAnimate = document.querySelector('.animate-left');
-    let topAnimate = document.querySelector('.animate-down');
+    let fadeAnimate = document.querySelectorAll('.animate-fade');
 
     window.addEventListener('scroll', function (event) {
         images.forEach(image => {
-            image.style.opacity = '1';
-            image.classList.add('animate__animated')
-            image.classList.add('animate__slow')
-            image.classList.add('animate__fadeIn')
-            })
+            if (isInViewport(image)) {
+                image.style.opacity = '1';
+                image.classList.add('animate__animated')
+                image.classList.add('animate__slow')
+                image.classList.add('animate__fadeIn')
+                }
+            });
 
-        if (isInViewport(rightAnimate)) {
-            rightAnimate.classList.add('animate__slow')
-            rightAnimate.classList.add('animate__animated')
-            rightAnimate.classList.add('animate__bounceInRight')
-            rightAnimate.style.opacity = '1';
-        }
+        rightAnimate.forEach(rightAnimation => {
+            if (isInViewport(rightAnimation)) {
+                rightAnimation.classList.add('animate__slow')
+                rightAnimation.classList.add('animate__animated')
+                rightAnimation.classList.add('animate__bounceInRight')
+                rightAnimation.style.opacity = '1';
+            }
+        });
 
         if (isInViewport(leftAnimate)) {
             leftAnimate.style.opacity = '1';
             leftAnimate.classList.add('animate__slow')
             leftAnimate.classList.add('animate__animated')
             leftAnimate.classList.add('animate__bounceInLeft')
-        }
-
-        if (isInViewport(topAnimate)) {
-            topAnimate.classList.add('animate__slow')
-            topAnimate.classList.add('animate__animated')
-            topAnimate.classList.add('animate__fadeIn')
-        }
+        };
+    
         
+        fadeAnimate.forEach(fadeAnimation => {
+            if (isInViewport(fadeAnimation)) {
+                fadeAnimation.classList.add('animate__slow')
+                fadeAnimation.classList.add('animate__animated')
+                fadeAnimation.classList.add('animate__fadeIn')
+            }
+        });
         
     }, false);
 }
@@ -83,16 +80,16 @@ portfolioApp.projectView = function () {
         speechBubble.addEventListener('mouseover', function () {
             speechBubble.classList.add('animate__animated')
             speechBubble.classList.add('animate__pulse')
+            speechBubble.classList.add('animate__repeat-3');
         }) 
         speechBubble.addEventListener('mouseout', function () {
             speechBubble.classList.remove('animate__animated')
             speechBubble.classList.remove('animate__pulse')
-
+            speechBubble.classList.remove('animate__repeat-3');
         }) 
 
     });
     
-    console.log(speechBubbles);
 
     let imageElement = document.querySelector('.selected-project-img');
     let projectList = document.querySelectorAll('input[name="project-choices"]')
@@ -100,7 +97,6 @@ portfolioApp.projectView = function () {
 
     projectList.forEach(project => {
         project.addEventListener('change', function () {
-            
             imageElement.src = `./assets/${project.value}.jpg`;
             imageElement.alt = `A screenshot from my ${project.value} web-development project.`;
 
@@ -111,11 +107,24 @@ portfolioApp.projectView = function () {
 }
 
 
+
+
 portfolioApp.init = function () {
+    // a function to allow for smooth scrolling from links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 
     portfolioApp.animationToggle();
     portfolioApp.inViewAnimation();
     portfolioApp.projectView();
+    portfolioApp.footerAnimation();
 
 
 }

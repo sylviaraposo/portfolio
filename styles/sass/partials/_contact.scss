@@ -8,9 +8,11 @@
         justify-content: space-around;
         .contact-text {
             width: 40%;
+            opacity: 0;
         }
         .contact-form {
             width: 40%;
+            opacity: 0;
             input {
                 border-radius: 6px;
                 padding:12px;
@@ -39,7 +41,7 @@
                 &:active, &:focus {
                     transform: translate3d(0, -3px, 0);
                     outline:2px solid $bright-pink;
-        box-shadow: rgba(0, 0, 0, .3) 5px 14px 9px -5px;
+                    box-shadow: rgba(0, 0, 0, .3) 5px 14px 9px -5px;
                 }
             }
         }

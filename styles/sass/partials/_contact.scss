@@ -19,8 +19,10 @@
                 border:none;
                 margin:10px 0;
                 font-family: $secondary-font;
+                transition: all 200ms ease-in-out;
                 &:active, &:focus {
                     outline:2px solid $bright-pink;
+                    transform: translate3d(0, -3px, 0);
                 }
             }
             textarea {
@@ -32,7 +34,9 @@
                 font-family: $secondary-font;
                 resize: none;
                 border:none;
+                transition: all 200ms ease-in-out;
                 &:active, &:focus {
+                    transform: translate3d(0, -3px, 0);
                     outline:2px solid $bright-pink;
                 }
             }

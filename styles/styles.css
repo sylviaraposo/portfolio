@@ -736,9 +736,11 @@ header .animation-toggle h5 {
   border: none;
   margin: 10px 0;
   font-family: "Mulish", sans-serif;
+  transition: all 200ms ease-in-out;
 }
 .contact .wrapper .contact-form input:active, .contact .wrapper .contact-form input:focus {
   outline: 2px solid #ed3363;
+  transform: translate3d(0, -3px, 0);
 }
 .contact .wrapper .contact-form textarea {
   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
@@ -749,8 +751,10 @@ header .animation-toggle h5 {
   font-family: "Mulish", sans-serif;
   resize: none;
   border: none;
+  transition: all 200ms ease-in-out;
 }
 .contact .wrapper .contact-form textarea:active, .contact .wrapper .contact-form textarea:focus {
+  transform: translate3d(0, -3px, 0);
   outline: 2px solid #ed3363;
 }
 

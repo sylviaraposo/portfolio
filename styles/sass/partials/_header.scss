@@ -4,6 +4,7 @@ header {
     height: 65vh;
     background-color: $soft-yellow;
     position: relative;
+        transition: ease all .5s;
     .header-text {
         width: max-content;
         transition: ease all .5s;
@@ -20,6 +21,10 @@ header {
             blink-caret .75s step-end infinite;
     } 
     #header-accent {
+        width: 246px;
+        transition: ease all .5s;
+        
+        // width: 30%;
         position: absolute;
         right:10%;
         bottom:-15%;
